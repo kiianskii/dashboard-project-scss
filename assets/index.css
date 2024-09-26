@@ -1,6 +1,33 @@
-@charset "UTF-8";
+@font-face {
+  font-family: "Montserrat";
+  src: url("/dashboard-project-scss/assets/Montserrat-Regular.woff2") format("woff2"), url("/dashboard-project-scss/assets/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/dashboard-project-scss/assets/Montserrat-Medium.woff2") format("woff2"), url("/dashboard-project-scss/assets/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/dashboard-project-scss/assets/Montserrat-SemiBold.woff2") format("woff2"), url("/dashboard-project-scss/assets/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/dashboard-project-scss/assets/Montserrat-Bold.woff2") format("woff2"), url("/dashboard-project-scss/assets/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 /***
-    The new CSS reset - version 1.11 (last updated 20.9.2023)
+    The new CSS reset - version 1.11.2 (last updated 15.11.2023)
     GitHub page: https://github.com/elad2412/the-new-css-reset
 ***/
 /*
@@ -39,7 +66,8 @@ button {
 /* Remove list styles (bullets/numbers) */
 ol,
 ul,
-menu {
+menu,
+summary {
   list-style: none;
 }
 
@@ -97,20 +125,15 @@ meter {
   color: unset;
 }
 
-/* remove default dot (•) sign */
-::marker {
-  content: initial;
-}
-
 /* fix the feature of 'hidden' attribute.
-   display:revert; revert to element instead of attribute */
+ display:revert; revert to element instead of attribute */
 :where([hidden]) {
   display: none;
 }
 
 /* revert for bug in Chromium browsers
-   - fix for the content editable attribute will work properly.
-   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+ - fix for the content editable attribute will work properly.
+ - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
 :where([contenteditable]:not([contenteditable=false])) {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
@@ -130,4 +153,46 @@ meter {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+/* Remove details summary webkit styles */
+::-webkit-details-marker {
+  display: none;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #b5b5be;
+  background-color: #13131a;
+}
+
+button {
+  font-family: inherit;
+  color: currentColor;
+  cursor: pointer;
+}
+
+summary {
+  list-style-type: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
