@@ -1,0 +1,16 @@
+@use "../utils/placeholders";
+@use "../utils/variables" as var;
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+$reports-status: (
+  "success": "up",
+  "warning": "dash",
+  "danger": "down",
+);
+
+.reports {
+  @extend %section-frame;
+
+  grid-area: reports;
+}

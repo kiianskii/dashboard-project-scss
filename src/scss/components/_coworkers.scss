@@ -1,0 +1,12 @@
+@use "../utils/placeholders";
+@use "../utils/variables" as var;
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+.co-workers {
+  grid-area: co-workers;
+}
+.co-workers-btn {
+  display: block;
+  margin: 0 auto;
+}
