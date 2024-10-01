@@ -9,4 +9,26 @@
 
 .welcome {
   grid-area: welcome;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  row-gap: 16px;
+}
+
+.page-title {
+  &-accent {
+    @extend %section-title;
+    display: block;
+    margin-bottom: 8px;
+
+    color: fn.get-color("light-primary");
+
+    @include mx.mq("lg") {
+      margin-bottom: 16px;
+    }
+  }
 }
