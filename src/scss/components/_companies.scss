@@ -41,8 +41,14 @@
   @extend %accent-text;
   color: fn.get-color("light");
 }
-.company-icon {
-  stroke: white;
+.company-icon-fill {
+  fill: fn.get-color("light");
+  stroke: transparent;
+}
+
+.company-icon-stroke {
+  stroke: fn.get-color("light");
+  fill: transparent;
 }
 
 .location-wrapper {
@@ -52,14 +58,9 @@
   margin-bottom: 32px;
 }
 .geo-icon {
-  fill: white;
+  fill: fn.get-color("success");
 }
 
 .company-location {
   @extend %main-text;
-}
-
-.company-btn {
-  color: fn.get-color("accent-primary");
-  border-color: fn.get-color("accent-primary");
 }
