@@ -383,9 +383,11 @@ summary {
 /* ==Frame == */
 .btn--frame {
   border-color: #f07f2e;
+  color: #f07f2e;
 }
 .btn--frame:active {
   border-color: #d14a00;
+  color: #d14a00;
 }
 .btn--frame[disabled] {
   background-color: rgba(181, 181, 190, 0.5);
@@ -1345,8 +1347,14 @@ summary {
   color: #fff;
 }
 
-.company-icon {
-  stroke: white;
+.company-icon-fill {
+  fill: #fff;
+  stroke: transparent;
+}
+
+.company-icon-stroke {
+  stroke: #fff;
+  fill: transparent;
 }
 
 .location-wrapper {
@@ -1363,12 +1371,7 @@ summary {
 }
 
 .geo-icon {
-  fill: white;
-}
-
-.company-btn {
-  color: #f07f2e;
-  border-color: #f07f2e;
+  fill: #82c43c;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1558,5 +1561,6 @@ summary {
   }
   .btn--frame:hover, .btn--frame:focus {
     border-color: #f15c27;
+    color: #f15c27;
   }
 }
